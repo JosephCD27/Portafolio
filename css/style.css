@@ -189,6 +189,25 @@ img{
     text-align: center;
 }
 
+.box{
+    position: relative;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: transparent;
+    transform: translateX(-50%);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.box:hover::after {
+    background-color: var(--primary-color);
+}
+
 .box img{
     width: 100%;
     border: 2px solid var(--secondary-color);
@@ -202,6 +221,11 @@ img{
     border: 2px solid var(--primary-color);
 }
 
+.box:hover h3{
+    color: var(--primary-color);
+    transition: .5s;
+}
+
 .card-projects{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -209,12 +233,13 @@ img{
 }
 
 .btn{
+    font-weight: 700;
     background: var(--primary-color);
     padding: 10px;
     border-radius: 15px;
     border: 2px solid #000000;
     margin-top: 20px;
-    transition: .2s;
+    transition: .1s;
 }
 
 .btn:hover{
@@ -224,4 +249,32 @@ img{
     transform: scale(.9);
     transition: .2s;
     cursor: pointer;
+}
+
+.main-footer{
+    background: #01000e92;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+
+.social-container li a{
+    color: inherit;
+}
+
+.social-container li a i{
+    transition: .2s;
+}
+
+.social-container li a i:hover{
+    color: var(--primary-color);
+    transition: .2s;
 }
