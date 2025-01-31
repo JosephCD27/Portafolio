@@ -3,62 +3,71 @@
     --main-color: #191c32;
     --primary-color: aqua;
     --secondary-color: #fff;
-  }
-  
-  /* Reset */
-  * {
+}
+
+/* Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
+}
+
   /* Main styling */
-  body,
-  html {
+body,
+html {
     font-family: "Raleway", sans-serif;
     color: var(--secondary-color);
     line-height: 1.7em;
     background-color: var(--main-color);
-  }
-  
-  hr {
-    border: 0.5px solid var(--secondary-color);
-  }
-  
-  /* Utility Classes */
-  a {
-    text-decoration: none;
-  }
+}
 
-  .container {
+hr {
+    border: 0.5px solid var(--secondary-color);
+}
+
+  /* Utility Classes */
+a {
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    object-fit: cover;
+}
+
+.container {
     margin: 0 auto;
     max-width: 1100px;
     padding: 0 30px;
-  }
-  
-  .section {
+    text-align: center;
+}
+
+.section {
     padding: 20px 0;
     overflow: hidden;
-  }
-  
-  .line-break {
+}
+
+.line-break {
     padding-bottom: 10px;
-  }
-  
-  .section-header {
+}
+
+.section-header {
     text-align: center;
     margin-bottom: 1.5rem;
-  }
-  
-  .title {
+}
+
+.title {
     position: relative;
     padding-bottom: 1rem;
     line-height: 1;
     font-size: 2rem;
     margin-bottom: 0.6rem;
-  }
-  
-  .title:before {
+}
+
+.title:before {
     content: attr(data-title);
     display: block;
     margin-bottom: 0.4rem;
@@ -67,9 +76,9 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 3px;
-  }
-  
-  .title:after {
+}
+
+.title:after {
     content: "";
     position: absolute;
     width: 90px;
@@ -79,21 +88,101 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-  }
-  
-  .text {
+}
+
+.text {
     max-width: 600px;
     margin: 0 auto;
-  }
+}
+
+.navbar{
+    position: fixed;
+    z-index: 5;
+    overflow: hidden;
+    background-color: var(--main-color);
+    width: 100%;
+}
 
 .navbar-container{
     display: flex;
     justify-content: space-around;
+    height: 3rem;
+    align-items: center;
 }
 
-.navbar-container .txt-btn{
+.txt-btn{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+}
+
+.txt-btn li {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 33.3%;
+    transition: .2s;
+}
+
+.txt-btn li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.txt-btn li:hover {
+    background: var(--primary-color);
+    transition: .2s;
+}
+
+.txt-btn li a:hover{
+    color: var(--main-color);
+    transition: .2s;
+
+}
+
+.logo{
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.banner-header {
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(
+        49deg,
+        rgba(0, 212, 255, 0.6) 0%,
+        rgba(134, 7, 224, 0.6) 100%
+    ),
+    url("../img/developer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-header-text{
+    height: 100%;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    place-content: center;
 }
 
 .portfolio h3{
@@ -104,11 +193,12 @@
     width: 100%;
     border: 2px solid var(--secondary-color);
     border-radius: 20px;
+    transition: .2s;
 }
 
 .box:hover img{
     transform:translateY(-10px);
-    transition: 1s;
+    transition: .5s;
     border: 2px solid var(--primary-color);
 }
 
@@ -116,4 +206,22 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
+}
+
+.btn{
+    background: var(--primary-color);
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #000000;
+    margin-top: 20px;
+    transition: .2s;
+}
+
+.btn:hover{
+    color: var(--primary-color);
+    background: var(--main-color);
+    border: 2px solid var(--primary-color);
+    transform: scale(.9);
+    transition: .2s;
+    cursor: pointer;
 }
