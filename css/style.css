@@ -213,6 +213,16 @@ span{
     text-align: center;
 }
 
+.service{
+    position: relative;
+    background: var(--card-color);
+    width: 100%;
+    padding: 1rem ;
+    border: 2px solid var(--secondary-color);
+    border-radius: 20px;
+    transition: .2s;
+}
+
 .box{
     position: relative;
     height: 15rem;
@@ -229,7 +239,21 @@ span{
     transition: background-color 0.2s ease-in-out;
 }
 
-.box:hover::after {
+.service::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: transparent;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+.box:hover::after,
+.service:hover::after {
     background-color: var(--primary-color);
 }
 
@@ -241,15 +265,23 @@ span{
     transition: .2s;
 }
 
-.box:hover img{
+.box:hover img, .service:hover{
     transform:translateY(-10px);
     transition: .5s;
     border: 2px solid var(--primary-color);
 }
 
-.box:hover h3{
+.box:hover h3,
+.service:hover h3,
+.service:hover i {
     color: var(--primary-color);
     transition: .5s;
+}
+
+.card-services{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
 }
 
 .card-projects{
