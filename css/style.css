@@ -354,6 +354,9 @@ span{
     border-radius: 10px;
     width: 20%;
 }
+.contact-info p{
+    word-wrap: break-word;
+}
 
 .contact-info i,.contact-info h4 {
     color: var(--primary-color);
@@ -460,7 +463,7 @@ span{
         width: 0;
     }
     to {
-        max-width: 100%; /* El ancho final se define en cada clase */
+        max-width: 100%;
     }
 }
 
@@ -474,6 +477,10 @@ span{
     padding: 1rem;
     border-radius: 10px;
     width: 100%;
+}
+
+.single-project-description p{
+    text-align: left;
 }
 
 .single-project-img{
@@ -490,6 +497,10 @@ span{
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.single-project-details p{
+    text-align: left;
 }
 
 .details{
@@ -513,4 +524,91 @@ span{
 .single-project-btn{
     display: flex;
     justify-content: space-around;
+}
+
+
+/* ------------------------pantallas moviles----------------------- */
+
+@media(max-width: 768px) {
+    .navbar-container{
+        display: flex;
+        justify-content: space-between;
+        height: 4rem;
+        align-items: center;
+    }
+    .txt-btn{
+        justify-content: space-between;
+        width: 90%;
+    }
+    .banner-header-text{
+        width: 90%;
+        margin-top: 2rem;
+    }
+
+    .card-services{
+        grid-template-columns: repeat(2,4fr);
+    }
+
+    .main-footer{
+        justify-content: space-around;
+    }
+    .social-container{
+        width: 60%;
+    }
+
+    .skills{
+        display: grid;
+        grid-template-columns: repeat(2,3fr);
+    }
+
+    .card-skill{
+        width: 90%;
+        margin: 10px;
+    }
+    .card-projects{
+    grid-template-columns: repeat(1,3fr);
+    }
+
+    .card-info{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info{
+        width: 90%;
+        margin: 1rem;
+    }
+
+    .class-form{
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+
+    .class-form .box-form{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .input-form{
+        height: 50px;
+    }
+
+    .class-form iframe{
+        width: 100%;
+        height: 20rem;
+    }
+
+    .single-project-details{
+        flex-direction: column;
+    }
+
+    .details, .info-details{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .single-project-img img{
+        width: 100%;
+        height: 100%;
+    }
 }
