@@ -119,7 +119,7 @@ span{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 25%;
+    width: 40%;
     height: 100%;
 }
 
@@ -217,10 +217,14 @@ span{
     position: relative;
     background: var(--card-color);
     width: 100%;
-    padding: 1rem ;
+    padding: 1rem;
     border: 2px solid var(--secondary-color);
     border-radius: 20px;
     transition: .2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .box{
@@ -246,8 +250,9 @@ span{
     height: 4px;
     border-radius: 3px;
     background-color: transparent;
+    bottom: -15px;
+    left: 50%;
     transform: translateX(-50%);
-    margin-top: 2rem;
     transition: background-color 0.2s ease-in-out;
 }
 
@@ -468,6 +473,7 @@ span{
 }
 
 .video iframe{
+    width: 50%;
     margin: 0 auto;
     border-radius: 1rem;
 }
@@ -529,6 +535,12 @@ span{
 
 /* ------------------------pantallas moviles----------------------- */
 
+@media(max-height: 450px){
+    .banner-header{
+        height: 100vh;
+    }
+}
+
 @media(max-width: 768px) {
     .navbar-container{
         display: flex;
@@ -540,6 +552,7 @@ span{
         justify-content: space-between;
         width: 90%;
     }
+
     .banner-header-text{
         width: 90%;
         margin-top: 2rem;
@@ -558,11 +571,17 @@ span{
 
     .skills{
         display: grid;
-        grid-template-columns: repeat(2,3fr);
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        width: 100%;
     }
 
     .card-skill{
-        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
         margin: 10px;
     }
     .card-projects{
